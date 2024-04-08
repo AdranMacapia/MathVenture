@@ -1599,6 +1599,13 @@
         },
         "optional": true
       },
+      "simulationUrl": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        },
+        "optional": true
+      },
       "objectives": {
         "type": "objectAttribute",
         "value": {

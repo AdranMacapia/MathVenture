@@ -28,6 +28,12 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
+      name: "simulationUrl",
+      title: "Simulation url",
+      type: "url",
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
       name: "objectives",
       title: "Objectives",
       type: "blockContent",

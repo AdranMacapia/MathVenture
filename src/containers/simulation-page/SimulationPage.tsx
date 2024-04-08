@@ -12,6 +12,7 @@ const fetchSimulation = (slug: string) => {
       'slug': slug.current,
       title,
       subtitle,
+      simulationUrl,
       topic -> {
         title,
         bgColor { rgb },

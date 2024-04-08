@@ -247,6 +247,7 @@ export type Simulation = {
   title?: string;
   slug?: Slug;
   subtitle?: string;
+  simulationUrl?: string;
   objectives?: Array<{
     children?: Array<{
       marks?: Array<string>;
@@ -575,12 +576,13 @@ export type PrivacyPolicyQueryResult = {
 
 // Source: ./src/containers/simulation-page/SimulationPage.tsx
 // Variable: SimulationQuery
-// Query:     *[_type == "simulation" && slug.current == $slug][0] {      _id,      'slug': slug.current,      title,      subtitle,      topic -> {        title,        bgColor { rgb },        textColor { rgb }      },      simulationScreenshots,      objectives,    }  
+// Query:     *[_type == "simulation" && slug.current == $slug][0] {      _id,      'slug': slug.current,      title,      subtitle,      simulationUrl ->,      topic -> {        title,        bgColor { rgb },        textColor { rgb }      },      simulationScreenshots,      objectives,    }  
 export type SimulationQueryResult = {
   _id: string;
   slug: string | null;
   title: string | null;
   subtitle: string | null;
+  simulationUrl: null;
   topic: {
     title: string | null;
     bgColor: {
@@ -711,13 +713,6 @@ export type TopicQueryResult = {
   }> | null;
 } | null;
 
-// Source: ./src/containers/auth/complete-signup/CompleteSignupPage.tsx
-// Variable: UserQuery
-// Query:     *[_type == "user" && email == $email][0] {      _id,    }  
-export type UserQueryResult = {
-  _id: string;
-} | null;
-
 // Source: ./src/containers/home-page/Topics/Topics.tsx
 // Variable: AllTopicsQuery
 // Query:     *[_type == "topic"] {      _id,      'slug': slug.current,      title,      subtitle,      asset -> {        svgAsset      },      bgColor {rgb},      textColor {rgb}    }  
@@ -747,6 +742,13 @@ export type AllTopicsQueryResult = Array<{
     rgb: RgbaColor | null;
   } | null;
 }>;
+
+// Source: ./src/containers/auth/complete-signup/CompleteSignupPage.tsx
+// Variable: UserQuery
+// Query:     *[_type == "user" && email == $email][0] {      _id,    }  
+export type UserQueryResult = {
+  _id: string;
+} | null;
 
 // Source: ./src/containers/simulations-page/Filters/Filters.tsx
 // Variable: AllTopicsForFilterQuery
