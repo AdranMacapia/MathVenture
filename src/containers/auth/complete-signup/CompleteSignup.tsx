@@ -7,7 +7,7 @@ import { Center, HStack, styled } from "styled-system/jsx";
 import Link from "next/link";
 import { Button } from "@/components/Button";
 
-type PickedUser = Pick<ClerkUser, "firstName" | "lastName" | "externalId"> & {
+type PickedUser = Pick<ClerkUser, "firstName" | "lastName"> & {
   email?: string;
 };
 
@@ -18,7 +18,6 @@ const addUserToSanity = async (user: PickedUser) => {
       firstName: user?.firstName,
       lastName: user?.lastName,
       email: user?.email,
-      clerkID: user?.externalId || "",
     }),
   });
 };

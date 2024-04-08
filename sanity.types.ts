@@ -76,7 +76,6 @@ export type User = {
   _rev: string;
   fullName?: string;
   email?: string;
-  clerkID?: string;
 };
 
 export type Faq = {

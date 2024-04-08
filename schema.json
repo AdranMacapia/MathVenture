@@ -373,13 +373,6 @@
           "type": "string"
         },
         "optional": true
-      },
-      "clerkID": {
-        "type": "objectAttribute",
-        "value": {
-          "type": "string"
-        },
-        "optional": true
       }
     }
   },

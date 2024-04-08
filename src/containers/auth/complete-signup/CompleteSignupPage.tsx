@@ -91,7 +91,6 @@ export const CompleteSignupPage = async () => {
         firstName: user?.firstName,
         lastName: user?.lastName,
         email: userEmail,
-        externalId: user?.externalId,
       }}
     />
   );
