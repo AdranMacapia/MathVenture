@@ -6,6 +6,8 @@ type SingleTopicPageProps = {
   };
 };
 
+export const revalidate = 1;
+
 export default function SingleTopicPage(props: SingleTopicPageProps) {
   return <TopicPage slug={props.params.slug} />;
 }

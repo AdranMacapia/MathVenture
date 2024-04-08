@@ -7,6 +7,8 @@ type SimulationsPageProps = {
   };
 };
 
+export const revalidate = 1;
+
 export default async function Simulations(props: SimulationsPageProps) {
   return (
     <SimulationsPage
