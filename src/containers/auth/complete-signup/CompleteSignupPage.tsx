@@ -90,7 +90,7 @@ export const CompleteSignupPage = async () => {
       user={{
         firstName: user?.firstName,
         lastName: user?.lastName,
-        email: userEmail,
+        email: userEmail || user?.username || "",
       }}
     />
   );

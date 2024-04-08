@@ -14,7 +14,7 @@ export default defineField({
 
     defineField({
       name: "email",
-      title: "Email",
+      title: "Email or username",
       type: "string",
       validation: (Rule) => Rule.required(),
     }),
