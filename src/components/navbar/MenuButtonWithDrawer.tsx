@@ -10,12 +10,15 @@ import { NavLink } from "./NavLink";
 import Link from "next/link";
 import Logo from "@/public/logo.svg";
 import { useState } from "react";
+import { useUser } from "@clerk/nextjs";
 
 export const MenuButtonWithDrawer = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const open = () => setIsOpen(true);
   const close = () => setIsOpen(false);
+
+  const { user } = useUser();
 
   return (
     <>
@@ -62,7 +65,13 @@ export const MenuButtonWithDrawer = () => {
                 </NavLink>
               </styled.ul>
 
-              <Button mt="auto">Login</Button>
+              {!user && (
+                <styled.div mt="auto" w="full">
+                  <Link href="/login" onClick={close}>
+                    <Button w="full">Login</Button>
+                  </Link>
+                </styled.div>
+              )}
             </Drawer.Body>
           </Drawer.Content>
         </Drawer.Positioner>

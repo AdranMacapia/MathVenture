@@ -23,7 +23,7 @@ export const Header = ({ data }: { data: HeroContent | null }) => {
 
       <styled.header className={container({ maxW: "1239px" })}>
         <styled.div
-          mt="100px"
+          mt={{ base: "50px", md: "100px" }}
           mx="auto"
           maxW="864px"
           textAlign="center"
@@ -31,7 +31,7 @@ export const Header = ({ data }: { data: HeroContent | null }) => {
           flexDir="column"
           alignItems="center"
         >
-          <styled.h1 fontSize="44px" fontWeight="black">
+          <styled.h1 fontSize={{ base: "40px", md: "44px" }} fontWeight="black">
             {actualData?.heading}
           </styled.h1>
 
