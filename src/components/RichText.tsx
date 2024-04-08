@@ -28,7 +28,7 @@ const SanityImageComponent = ({ value, isInline }: any) => {
 
 export const RichText = ({ content }: { content: PortableTextBlock }) => {
   return (
-    <styled.div className={prose()} color="gray">
+    <styled.div className={prose({})} color="gray" w="full">
       <PortableText
         value={content}
         components={{

@@ -1,1 +1,63 @@
 @layer reset, base, tokens, recipes, utilities;
+
+.prose {
+    max-width: 100%;
+}
+
+.cl-headerTitle{
+    font-weight:800;
+    font-size: 28px;
+}
+
+.cl-profileSectionPrimaryButton, .cl-accordionTriggerButton, .cl-navbarButton  {
+    font-size: 14px;
+    letter-spacing: normal;
+}
+
+
+.cl-formButtonPrimary{
+height: 44px;
+font-size: 14px;
+font-weight: bold;
+letter-spacing: normal;
+text-transform: none;
+}
+
+.cl-socialButtonsBlockButton {
+letter-spacing: normal;
+height: 44px;
+}
+
+.cl-formFieldInput{
+    height: 44px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.cl-socialButtonsBlockButtonText {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.cl-socialButtonsBlockButton__google{
+    display: flex;
+    justify-content: center;
+}
+
+.cl-socialButtonsBlockButton__google > div {
+    width: fit-content;
+}
+
+.cl-footerActionText, .cl-footerActionLink {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.cl-form {
+    gap: 30px;
+}
+
+.cl-userButtonPopoverActionButtonText {
+letter-spacing: normal;
+font-weight: 600;
+}

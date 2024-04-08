@@ -22,8 +22,10 @@ export const MissionVision = ({
               Our Mission
             </styled.h2>
 
-            {/* @ts-ignore */}
-            <RichText content={missionContent?.content} />
+            <styled.div fontWeight="semibold">
+              {/* @ts-ignore */}
+              <RichText content={missionContent?.content} />
+            </styled.div>
           </styled.div>
 
           <styled.div mt="130px">
@@ -31,8 +33,10 @@ export const MissionVision = ({
               Our Vision
             </styled.h2>
 
-            {/* @ts-ignore */}
-            <RichText content={visionContent?.content} />
+            <styled.div fontWeight="semibold">
+              {/* @ts-ignore */}
+              <RichText content={visionContent?.content} />
+            </styled.div>
           </styled.div>
         </styled.div>
       </Container>
