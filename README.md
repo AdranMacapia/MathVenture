@@ -11,10 +11,9 @@ Content management in the platform is managed by [Sanity](https://www.sanity.io/
 
 
 ## Managing Authentication and users
-Authentication in the platform is done completely via [Clerk Auth](https://clerk.com/). To see the list of users or manage authentication, you can access that from your clerk account [here](https://dashboard.clerk.com/apps/app_2Z4WmNXwVYqZS8I7bQkLCOQKBtP/instances/ins_2Z4WmRsgi2g6ouosqDM4FTyS2lX).
+Authentication in the platform is done completely via [Clerk Auth](https://clerk.com/). To see the list of users or manage authentication, you can access that from your clerk account.
 
 You can also find a list of users on your sanity studio at `/studio/structure/user`
-
 
 
 ## Technologies
@@ -25,7 +24,7 @@ You can also find a list of users on your sanity studio at `/studio/structure/us
 - Clerk authentication
 
 ## Environment variables
-You can find the missing values in your vercel account [here](https://vercel.com/{space}{project}/settings/environment-variables)
+You can find the actual values in your vercel account
 
 ### Sanity env
 - NEXT_PUBLIC_SANITY_PROJECT_ID
