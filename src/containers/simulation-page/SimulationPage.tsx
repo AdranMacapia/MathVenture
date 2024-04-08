@@ -11,6 +11,7 @@ const fetchSimulation = (slug: string) => {
       _id,
       'slug': slug.current,
       title,
+      coverImage,
       subtitle,
       simulationUrl,
       topic -> {

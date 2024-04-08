@@ -9,6 +9,7 @@ import { SimulationQueryResult } from "sanity.types";
 import { parseColor } from "@/lib/utils";
 import { useRef, useState } from "react";
 import { useFullscreen, useToggle } from "react-use";
+import { urlForImage } from "../../../sanity/lib/image";
 
 export const Header = ({
   simulation,
@@ -28,6 +29,9 @@ export const Header = ({
     onClose: () => toggle(false),
   });
 
+  // @ts-ignore
+  const bgImage = urlForImage(simulation?.coverImage || "");
+
   return (
     <styled.header mt="60px">
       <Container maxW="1239px">
@@ -40,6 +44,7 @@ export const Header = ({
 
         {!showFrame ? (
           <Center
+            backgroundSize="cover"
             onClick={() => {
               setShowFrame(true);
               toggle();
@@ -51,15 +56,23 @@ export const Header = ({
             flexDir="column"
             textAlign="center"
             style={{
-              backgroundColor: bgColor,
+              backgroundColor: textColor,
+              // @ts-ignore
+              backgroundImage: `url("${bgImage}")`,
               borderColor: textColor,
+              backgroundBlendMode: "overlay",
             }}
           >
             <styled.button cursor="pointer">
               <PlayIcon />
             </styled.button>
 
-            <styled.p mt="20px" fontWeight="extrabold" fontSize="lg">
+            <styled.p
+              mt="20px"
+              fontWeight="extrabold"
+              fontSize="lg"
+              color="white"
+            >
               Start learning
             </styled.p>
           </Center>
