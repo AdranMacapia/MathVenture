@@ -6,18 +6,16 @@ const CreateSanityUserSchema = z.object({
   firstName: z.string(),
   lastName: z.string(),
   email: z.string(),
-  clerkId: z.string().optional(),
 });
 
 type UserInfo = z.infer<typeof CreateSanityUserSchema>;
 
 const addUserToSanity = async (user?: UserInfo) => {
   try {
-    return await client.create<Pick<User, "fullName" | "email" | "clerkID">>({
+    return await client.create<Pick<User, "fullName" | "email">>({
       _type: "user",
       fullName: `${user?.firstName} ${user?.lastName}`,
       email: user?.email || "",
-      clerkID: user?.clerkId || "",
     });
   } catch (error) {
     // @ts-ignore
