@@ -18,7 +18,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider>
+    <ClerkProvider
+      appearance={{
+        elements: {
+          navbar: {
+            display: "none",
+          },
+        },
+        layout: {
+          privacyPageUrl: "/privacy-policy",
+        },
+      }}
+    >
       <html lang="en">
         <body className={nunito.className}>
           <Navbar />

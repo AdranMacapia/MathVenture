@@ -41,7 +41,7 @@ height: 44px;
 
 .cl-socialButtonsBlockButton__google{
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
 }
 
 .cl-socialButtonsBlockButton__google > div {
