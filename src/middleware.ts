@@ -9,6 +9,7 @@ export default authMiddleware({
     "/simulations/(.*)",
     "/privacy-policy",
     "/about",
+    "/studio/(.*)",
   ],
 });
 
