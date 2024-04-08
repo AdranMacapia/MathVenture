@@ -3,8 +3,8 @@ import { z } from "zod";
 import { User } from "sanity.types";
 
 const CreateSanityUserSchema = z.object({
-  firstName: z.string(),
-  lastName: z.string(),
+  firstName: z.string().optional().nullable(),
+  lastName: z.string().optional().nullable(),
   email: z.string(),
 });
 
@@ -14,7 +14,7 @@ const addUserToSanity = async (user?: UserInfo) => {
   try {
     return await client.create<Pick<User, "fullName" | "email">>({
       _type: "user",
-      fullName: `${user?.firstName} ${user?.lastName}`,
+      fullName: `${user?.firstName || "Not added"} ${user?.lastName || "Not added"}`,
       email: user?.email || "",
     });
   } catch (error) {
@@ -25,7 +25,6 @@ const addUserToSanity = async (user?: UserInfo) => {
 
 export async function POST(request: Request) {
   const res = await request.json();
-
   const details = CreateSanityUserSchema.parse(res);
 
   try {
