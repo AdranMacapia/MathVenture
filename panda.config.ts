@@ -97,6 +97,69 @@ export default defineConfig({
           },
         },
       },
+      semanticTokens: {
+        colors: {
+          // Or whatever name you've set as the semantic tokens
+          // prefix or recipe name
+          prose: {
+            body: {
+              value: "{colors.gray.DEFAULT}",
+            },
+            heading: {
+              value: "{colors.gray.dark}",
+            },
+            lead: {
+              value: "{colors.gray.DEFAULT}",
+            },
+            link: {
+              value: "{colors.gray.dark}",
+            },
+            bold: {
+              value: "{colors.gray.dark}",
+            },
+            counter: {
+              value: "{colors.gray.DEFAULT}",
+            },
+            bullet: {
+              value: "{colors.gray.DEFAULT}",
+            },
+            hrBorder: {
+              value: "{colors.gray.border}",
+            },
+            quote: {
+              value: "{colors.gray.dark}",
+            },
+            quoteBorder: {
+              value: "{colors.gray.border}",
+            },
+            caption: {
+              value: "{colors.gray.DEFAULT}",
+            },
+            kbd: {
+              value: "{colors.gray.dark}",
+            },
+            kbdShadow: {
+              // Expects an RGB value
+              value: "0 0 0",
+            },
+            code: {
+              value: "{colors.gray.dark}",
+            },
+            preCode: {
+              value: "{colors.gray.border}",
+            },
+            preBg: {
+              value: "{colors.gray.DEFAULT}",
+            },
+            thBorder: {
+              value: "{colors.gray.border}",
+            },
+            tdBorder: {
+              value: "{colors.gray.border}",
+            },
+          },
+        },
+      },
     },
   },
 
