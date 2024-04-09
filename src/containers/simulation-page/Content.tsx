@@ -1,7 +1,7 @@
 import { parseColor } from "@/lib/utils";
 import { SimulationQueryResult } from "sanity.types";
 import { urlForImage } from "./../../../sanity/lib/image";
-import { Box, Container, Flex, Grid, styled } from "styled-system/jsx";
+import { Container, Flex, Grid, styled } from "styled-system/jsx";
 import Image from "next/image";
 import { RichText } from "@/components/RichText";
 
