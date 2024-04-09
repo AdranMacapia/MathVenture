@@ -96,7 +96,7 @@ export const Header = ({
               height="100%"
               allowFullScreen
               style={{
-                borderRadius: "12px",
+                borderRadius: "8px",
               }}
             ></iframe>
           </Box>
