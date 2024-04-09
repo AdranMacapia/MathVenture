@@ -49,6 +49,7 @@ export const Content = ({ topic }: { topic: TopicQueryResult }) => {
           rowGap="8px"
           columnGap="10px"
           w="full"
+          h="fit-content"
         >
           {topic?.simulationScreenshots?.map((screenshot) => {
             return (

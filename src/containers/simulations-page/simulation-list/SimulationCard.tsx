@@ -29,10 +29,16 @@ export const SimulationCard = ({
       px={size === "sm" ? "8px" : "12px"}
       pt="10px"
       pb="36px"
+      h="full"
+      display="flex"
+      flexDir="column"
     >
-      {/* Implement image here */}
-
-      <styled.div pos="relative" h={{ base: "200px", md: "289px" }} w="full">
+      <styled.div
+        pos="relative"
+        minH={{ base: "200px", md: "289px" }}
+        maxH={{ base: "200px", md: "289px" }}
+        w="full"
+      >
         <Image
           src={coverImage || ""}
           alt={title || ""}
@@ -48,6 +54,9 @@ export const SimulationCard = ({
       <styled.div
         px={{ base: "12px", md: "27px" }}
         mt={{ base: "30px", md: "40px" }}
+        h="full"
+        display="flex"
+        flexDir="column"
       >
         <styled.h3
           fontWeight="extrabold"
@@ -67,21 +76,23 @@ export const SimulationCard = ({
         </styled.p>
 
         {topic && (
-          <styled.div
-            rounded="16px"
-            py="2px"
-            px="8px"
-            fontSize="xs"
-            style={{
-              backgroundColor: bgColor,
-              color: textColor,
-            }}
-            fontWeight="black"
-            mt="70px"
-            display="inline-block"
-            textTransform="uppercase"
-          >
-            {topic}
+          <styled.div mt="auto">
+            <styled.div
+              rounded="16px"
+              py="2px"
+              px="8px"
+              fontSize="xs"
+              style={{
+                backgroundColor: bgColor,
+                color: textColor,
+              }}
+              fontWeight="black"
+              mt="40px"
+              display="inline-block"
+              textTransform="uppercase"
+            >
+              {topic}
+            </styled.div>
           </styled.div>
         )}
       </styled.div>
