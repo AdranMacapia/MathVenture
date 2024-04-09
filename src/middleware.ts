@@ -11,6 +11,8 @@ export default authMiddleware({
     "/about",
     "/studio",
     "/studio/(.*)",
+    "/topics",
+    "/topics/(.*)",
   ],
 });
 
