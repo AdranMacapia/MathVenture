@@ -43,7 +43,7 @@ export const Content = ({
               display="inline-block"
               textTransform="uppercase"
             >
-              Geometry
+              {simulation?.topic?.title}
             </styled.div>
 
             <styled.p fontWeight="semibold" mt="40px" color="gray">
