@@ -4,6 +4,7 @@ import "./globals.css";
 import { Navbar } from "@/components/navbar/Navbar";
 import { Footer } from "@/components/Footer";
 import { ClerkProvider } from "@clerk/nextjs";
+import BackToTopButton from "@/components/BackToTop";
 
 const nunito = Nunito({ subsets: ["latin"] });
 
@@ -34,6 +35,7 @@ export default function RootLayout({
         <body className={nunito.className}>
           <Navbar />
           {children}
+          <BackToTopButton />
           <Footer />
         </body>
       </html>
