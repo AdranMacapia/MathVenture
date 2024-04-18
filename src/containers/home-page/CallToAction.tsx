@@ -12,7 +12,7 @@ export const CallToAction = ({ data }: { data: HeroContent | null }) => {
   return (
     <styled.section
       bgImage={"url(/backgrounds/puzzle.png)"}
-      className={css({ mt: "140px" })}
+      // className={css({ mt: "140px" })}
     >
       <Container
         maxW="1239px"

@@ -26,6 +26,10 @@ export default defineType({
           type: "hero",
         }),
         defineArrayMember({
+          name: "heroWithGrid",
+          type: "heroWithGrid",
+        }),
+        defineArrayMember({
           name: "richContentType",
           type: "richContentType",
         }),

@@ -68,6 +68,21 @@ export type Geopoint = {
   alt?: number;
 };
 
+export type GridItem = {
+  _type: "gridItem";
+  title?: string;
+  description?: string;
+};
+
+export type HeroWithGrid = {
+  _type: "heroWithGrid";
+  heading?: string;
+  tagline?: string;
+  grid?: Array<{
+    _key: string;
+  } & GridItem>;
+};
+
 export type Feedback = {
   _id: string;
   _type: "feedback";
@@ -217,6 +232,8 @@ export type Page = {
   pageBuilder?: Array<({
     _key: string;
   } & Hero) | ({
+    _key: string;
+  } & HeroWithGrid) | ({
     _key: string;
   } & RichContentType)>;
 };
@@ -558,6 +575,8 @@ export type AboutPageQueryResult = {
     _key: string;
   } & Hero) | ({
     _key: string;
+  } & HeroWithGrid) | ({
+    _key: string;
   } & RichContentType)> | null;
 } | null;
 
@@ -570,6 +589,8 @@ export type HomePageQueryResult = {
     _key: string;
   } & Hero) | ({
     _key: string;
+  } & HeroWithGrid) | ({
+    _key: string;
   } & RichContentType)> | null;
 } | null;
 
@@ -581,6 +602,8 @@ export type PrivacyPolicyQueryResult = {
   pageBuilder: Array<({
     _key: string;
   } & Hero) | ({
+    _key: string;
+  } & HeroWithGrid) | ({
     _key: string;
   } & RichContentType)> | null;
 } | null;

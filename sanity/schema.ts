@@ -13,6 +13,8 @@ import { richContentType } from "./schemaTypes/richContent";
 import faq from "./schemaTypes/faq";
 import user from "./schemaTypes/user";
 import feedback from "./schemaTypes/feedback";
+import heroWithGrid from "./schemaTypes/heroWithGrid";
+import gridItem from "./schemaTypes/gridItem";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -29,5 +31,7 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     faq,
     user,
     feedback,
+    heroWithGrid,
+    gridItem,
   ],
 };

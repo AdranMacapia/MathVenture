@@ -1,9 +1,10 @@
 import { parseColor } from "@/lib/utils";
 import { SimulationQueryResult } from "sanity.types";
 import { urlForImage } from "./../../../sanity/lib/image";
-import { Container, Flex, Grid, styled } from "styled-system/jsx";
+import { Box, Container, Flex, Grid, styled } from "styled-system/jsx";
 import Image from "next/image";
 import { RichText } from "@/components/RichText";
+import ShowMoreLess from "@/components/TextWithShowMore";
 
 export const Content = ({
   simulation,
@@ -19,7 +20,7 @@ export const Content = ({
         <Flex
           w="full"
           justifyContent="space-between"
-          gap="40px"
+          gap="80px"
           flexDir={{ base: "column-reverse", md: "row" }}
         >
           <styled.div w="full" maxW="600px">
@@ -46,7 +47,10 @@ export const Content = ({
               </styled.div>
 
               <styled.p fontWeight="semibold" mt="40px" color="gray">
-                {simulation?.subtitle}
+                <ShowMoreLess
+                  text={simulation?.subtitle || ""}
+                  maxLength={500}
+                />
               </styled.p>
             </>
 
@@ -65,37 +69,49 @@ export const Content = ({
             </styled.div>
           </styled.div>
 
-          <Grid
-            gridTemplateColumns={{ base: 1, md: 2 }}
-            rowGap="8px"
-            columnGap="10px"
-            w="full"
-            h="fit-content"
-          >
-            {simulation?.simulationScreenshots?.map((screenshot) => {
-              return (
-                <styled.div
-                  key={screenshot._key}
-                  pos="relative"
-                  height="177px"
-                  w="full"
-                  rounded="10px"
-                  border="1px solid rgba(0, 0, 0, 0.1)"
-                >
-                  <Image
-                    src={urlForImage(screenshot)}
-                    alt={screenshot.alt || ""}
-                    fill
-                    style={{
-                      backgroundColor: bgColor,
-                      objectFit: "cover",
-                      borderRadius: "12px",
-                    }}
-                  />
-                </styled.div>
-              );
-            })}
-          </Grid>
+          <Box w="full">
+            <Grid
+              gridTemplateColumns={{ base: 1, md: 2 }}
+              rowGap="8px"
+              columnGap="10px"
+              h="fit-content"
+            >
+              {simulation?.simulationScreenshots?.map((screenshot) => {
+                return (
+                  <styled.div
+                    key={screenshot._key}
+                    pos="relative"
+                    height="177px"
+                    w="full"
+                    rounded="10px"
+                    border="1px solid rgba(0, 0, 0, 0.1)"
+                  >
+                    <Image
+                      src={urlForImage(screenshot)}
+                      alt={screenshot.alt || ""}
+                      fill
+                      style={{
+                        backgroundColor: bgColor,
+                        objectFit: "cover",
+                        borderRadius: "12px",
+                      }}
+                    />
+                  </styled.div>
+                );
+              })}
+            </Grid>
+
+            {/* <Box
+              mt="32px"
+              rounded="12px"
+              borderWidth="1px"
+              bgColor="gray.3"
+              py="20px"
+              px="24px"
+            >
+              <styled.p fontWeight="extrabold">Credits</styled.p>
+            </Box> */}
+          </Box>
         </Flex>
       </Container>
     </styled.section>

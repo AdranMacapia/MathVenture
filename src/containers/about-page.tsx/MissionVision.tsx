@@ -16,7 +16,7 @@ export const MissionVision = ({
   return (
     <styled.section bgColor="white" mt="130px">
       <Container maxW="1239px">
-        <styled.div maxW="800px">
+        <styled.div maxW="800px" textAlign="center" mx="auto">
           <styled.div>
             <styled.h2 fontSize="26px" fontWeight="extrabold" mb="35px">
               Our Mission

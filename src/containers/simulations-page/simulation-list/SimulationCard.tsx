@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { css } from "styled-system/css";
 import { styled } from "styled-system/jsx";
 
 type SimulationCardProps = {
@@ -71,6 +72,7 @@ export const SimulationCard = ({
           color="gray"
           fontWeight={size === "sm" ? "semibold" : "bold"}
           mt="23px"
+          className={css({ lineClamp: 4 })}
         >
           {subtitle}
         </styled.p>
