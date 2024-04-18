@@ -68,6 +68,17 @@ export type Geopoint = {
   alt?: number;
 };
 
+export type Feedback = {
+  _id: string;
+  _type: "feedback";
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  feedbackType?: string;
+  message?: string;
+  date?: string;
+};
+
 export type User = {
   _id: string;
   _type: "user";

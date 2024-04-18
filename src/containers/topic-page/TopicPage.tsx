@@ -4,6 +4,7 @@ import { TopicSimulationsList } from "./TopicSimulationsList";
 import { groq } from "next-sanity";
 import { client } from "../../../sanity/lib/client";
 import { TopicQueryResult } from "sanity.types";
+import { Feedback } from "@/components/Feedback";
 
 const fetchTopic = (slug: string) => {
   const TopicQuery = groq`
@@ -38,6 +39,7 @@ export const TopicPage = async ({ slug }: { slug: string }) => {
       <styled.main mt="73px">
         <Content topic={topic} />
         <TopicSimulationsList topic={topic} />
+        <Feedback />
       </styled.main>
     </>
   );

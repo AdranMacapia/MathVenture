@@ -4,6 +4,7 @@ import { Content } from "./Content";
 import { groq } from "next-sanity";
 import { client } from "./../../../sanity/lib/client";
 import { SimulationQueryResult } from "sanity.types";
+import { Feedback } from "@/components/Feedback";
 
 const fetchSimulation = (slug: string) => {
   const SimulationQuery = groq`
@@ -38,6 +39,8 @@ export const SimulationPage = async ({ slug }: { slug: string }) => {
 
       <styled.main mt="73px">
         <Content simulation={data} />
+
+        <Feedback />
       </styled.main>
     </>
   );

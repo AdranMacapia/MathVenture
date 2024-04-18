@@ -12,6 +12,7 @@ import { aboutPageType } from "./schemaTypes/aboutPage";
 import { richContentType } from "./schemaTypes/richContent";
 import faq from "./schemaTypes/faq";
 import user from "./schemaTypes/user";
+import feedback from "./schemaTypes/feedback";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -27,5 +28,6 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     richContentType,
     faq,
     user,
+    feedback,
   ],
 };

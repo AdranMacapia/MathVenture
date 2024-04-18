@@ -1,7 +1,7 @@
 import { Button } from "@/components/Button";
 import { HeroContent } from "@/lib/shared.types";
 import Link from "next/link";
-import { Hero, RichContentType } from "sanity.types";
+import { Hero } from "sanity.types";
 import { css } from "styled-system/css";
 import { Container, styled } from "styled-system/jsx";
 import { center } from "styled-system/patterns";
