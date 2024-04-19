@@ -40,6 +40,11 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
+      name: "mechanics",
+      title: "Mechanics",
+      type: "blockContent",
+    }),
+    defineField({
       name: "coverImage",
       title: "Cover Image",
       type: "image",

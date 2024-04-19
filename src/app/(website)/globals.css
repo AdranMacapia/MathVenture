@@ -4,31 +4,33 @@
     max-width: 100%;
 }
 
-.cl-headerTitle{
-    font-weight:800;
+.cl-headerTitle {
+    font-weight: 800;
     font-size: 28px;
 }
 
-.cl-profileSectionPrimaryButton, .cl-accordionTriggerButton, .cl-navbarButton  {
+.cl-profileSectionPrimaryButton,
+.cl-accordionTriggerButton,
+.cl-navbarButton {
     font-size: 14px;
     letter-spacing: normal;
 }
 
 
-.cl-formButtonPrimary{
-height: 44px;
-font-size: 14px;
-font-weight: bold;
-letter-spacing: normal;
-text-transform: none;
+.cl-formButtonPrimary {
+    height: 44px;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: normal;
+    text-transform: none;
 }
 
 .cl-socialButtonsBlockButton {
-letter-spacing: normal;
-height: 44px;
+    letter-spacing: normal;
+    height: 44px;
 }
 
-.cl-formFieldInput{
+.cl-formFieldInput {
     height: 44px;
     font-size: 14px;
     font-weight: 600;
@@ -39,16 +41,17 @@ height: 44px;
     font-weight: bold;
 }
 
-.cl-socialButtonsBlockButton__google{
+.cl-socialButtonsBlockButton__google {
     display: flex;
     /* justify-content: center; */
 }
 
-.cl-socialButtonsBlockButton__google > div {
+.cl-socialButtonsBlockButton__google>div {
     width: fit-content;
 }
 
-.cl-footerActionText, .cl-footerActionLink {
+.cl-footerActionText,
+.cl-footerActionLink {
     font-size: 14px;
     font-weight: 600;
 }
@@ -58,12 +61,17 @@ height: 44px;
 }
 
 .cl-userButtonPopoverActionButtonText {
-letter-spacing: normal;
-font-weight: 600;
+    letter-spacing: normal;
+    font-weight: 600;
 }
 
 
 .cl-internal-17ydaof {
-    max-width: 350px; 
-     box-shadow: none;
+    max-width: 350px;
+    box-shadow: none;
+}
+
+.cl-userButtonOuterIdentifier {
+    color: var(--colors-gray);
+    font-weight: 600;
 }

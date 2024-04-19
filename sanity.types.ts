@@ -306,6 +306,36 @@ export type Simulation = {
     _type: "image";
     _key: string;
   }>;
+  mechanics?: Array<{
+    children?: Array<{
+      marks?: Array<string>;
+      text?: string;
+      _type: "span";
+      _key: string;
+    }>;
+    style?: "normal" | "h1" | "h2" | "h3" | "h4" | "blockquote";
+    listItem?: "bullet";
+    markDefs?: Array<{
+      href?: string;
+      _type: "link";
+      _key: string;
+    }>;
+    level?: number;
+    _type: "block";
+    _key: string;
+  } | {
+    asset?: {
+      _ref: string;
+      _type: "reference";
+      _weak?: boolean;
+      [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
+    };
+    hotspot?: SanityImageHotspot;
+    crop?: SanityImageCrop;
+    alt?: string;
+    _type: "image";
+    _key: string;
+  }>;
   coverImage?: {
     asset?: {
       _ref: string;
@@ -610,7 +640,7 @@ export type PrivacyPolicyQueryResult = {
 
 // Source: ./src/containers/simulation-page/SimulationPage.tsx
 // Variable: SimulationQuery
-// Query:     *[_type == "simulation" && slug.current == $slug][0] {      _id,      'slug': slug.current,      title,      coverImage,      subtitle,      simulationUrl,      topic -> {        title,        bgColor { rgb },        textColor { rgb }      },      simulationScreenshots,      objectives,    }  
+// Query:     *[_type == "simulation" && slug.current == $slug][0] {      _id,      'slug': slug.current,      title,      coverImage,      subtitle,      simulationUrl,      topic -> {        title,        bgColor { rgb },        textColor { rgb }      },      simulationScreenshots,      objectives,      mechanics    }  
 export type SimulationQueryResult = {
   _id: string;
   slug: string | null;
@@ -652,6 +682,36 @@ export type SimulationQueryResult = {
     _key: string;
   }> | null;
   objectives: Array<{
+    asset?: {
+      _ref: string;
+      _type: "reference";
+      _weak?: boolean;
+      [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
+    };
+    hotspot?: SanityImageHotspot;
+    crop?: SanityImageCrop;
+    alt?: string;
+    _type: "image";
+    _key: string;
+  } | {
+    children?: Array<{
+      marks?: Array<string>;
+      text?: string;
+      _type: "span";
+      _key: string;
+    }>;
+    style?: "blockquote" | "h1" | "h2" | "h3" | "h4" | "normal";
+    listItem?: "bullet";
+    markDefs?: Array<{
+      href?: string;
+      _type: "link";
+      _key: string;
+    }>;
+    level?: number;
+    _type: "block";
+    _key: string;
+  }> | null;
+  mechanics: Array<{
     asset?: {
       _ref: string;
       _type: "reference";

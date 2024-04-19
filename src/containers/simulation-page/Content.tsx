@@ -67,6 +67,22 @@ export const Content = ({
               {/* @ts-ignore */}
               <RichText content={simulation?.objectives} />
             </styled.div>
+
+            {simulation?.mechanics && (
+              <styled.div mt="80px">
+                <styled.h2
+                  fontSize="sm"
+                  fontWeight="black"
+                  textTransform="uppercase"
+                  mb="24px"
+                >
+                  Mechanics
+                </styled.h2>
+
+                {/* @ts-ignore */}
+                <RichText content={simulation?.mechanics} />
+              </styled.div>
+            )}
           </styled.div>
 
           <Box w="full">
