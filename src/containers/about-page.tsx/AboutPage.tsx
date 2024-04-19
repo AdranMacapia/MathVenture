@@ -5,6 +5,7 @@ import { MissionVision } from "./MissionVision";
 import { client } from "../../../sanity/lib/client";
 import { groq } from "next-sanity";
 import { AboutPageQueryResult } from "sanity.types";
+import { HeroContent } from "@/lib/shared.types";
 
 const fetchAboutPageInfo = () => {
   const AboutPageQuery = groq`
@@ -28,10 +29,13 @@ export const AboutPage = async () => {
 
   return (
     <>
-      <Header data={headerContent} />
+      <Header data={headerContent as HeroContent} />
 
       <main>
-        <MissionVision mission={missionContent} vision={visionContent} />
+        <MissionVision
+          mission={missionContent as HeroContent}
+          vision={visionContent as HeroContent}
+        />
         <styled.div mt="200px">
           <FAQs />
         </styled.div>
