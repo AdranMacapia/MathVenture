@@ -18,7 +18,7 @@ export const Feedback = () => {
           })}
         >
           <styled.h2 fontWeight="extrabold" fontSize="28px">
-            We Value Your Feedback
+            We value your feedback
           </styled.h2>
 
           <styled.p mt="16px" mb="45px" maxW="616px" fontWeight="medium">
