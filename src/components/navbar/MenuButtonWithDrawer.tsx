@@ -8,7 +8,6 @@ import * as Drawer from "@/components/Drawer";
 import { Button } from "../Button";
 import { NavLink } from "./NavLink";
 import Link from "next/link";
-import Logo from "@/public/logo.svg";
 import { useState } from "react";
 import { useUser } from "@clerk/nextjs";
 import Image from "next/image";

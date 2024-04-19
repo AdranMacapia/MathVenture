@@ -6,7 +6,7 @@ import { serverBaseUrl } from "@/lib/utils";
 const CreateSanityUserSchema = z.object({
   feedbackType: z.string().optional().nullable(),
   message: z.string().optional().nullable(),
-  timestamp: z.number(),
+  timestamp: z.number().optional().nullable(),
 });
 
 type FeedbackInfo = z.infer<typeof CreateSanityUserSchema>;
@@ -19,7 +19,7 @@ const createFeedBackMessage = async (feedback?: FeedbackInfo) => {
       _type: "feedback",
       feedbackType: feedback?.feedbackType || "",
       message: feedback?.message || "",
-      date: feedback?.timestamp ? new Date(feedback?.timestamp).toString() : "",
+      date: new Date(feedback?.timestamp || Date.now()).toString(),
     });
   } catch (error) {
     // @ts-ignore

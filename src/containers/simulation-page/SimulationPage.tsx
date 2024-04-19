@@ -4,7 +4,7 @@ import { Content } from "./Content";
 import { groq } from "next-sanity";
 import { client } from "./../../../sanity/lib/client";
 import { SimulationQueryResult } from "sanity.types";
-import { Feedback } from "@/components/Feedback";
+import { Feedback } from "@/components/feedback/Feedback";
 import Script from "next/script";
 import { baseUrl } from "@/lib/utils";
 

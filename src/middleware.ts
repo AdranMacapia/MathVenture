@@ -11,6 +11,7 @@ export default authMiddleware({
     "/studio/(.*)",
     "/topics",
     "/topics/(.*)",
+    "/api/receive-feedback",
   ],
 });
 

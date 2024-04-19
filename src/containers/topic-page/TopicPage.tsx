@@ -4,7 +4,7 @@ import { TopicSimulationsList } from "./TopicSimulationsList";
 import { groq } from "next-sanity";
 import { client } from "../../../sanity/lib/client";
 import { TopicQueryResult } from "sanity.types";
-import { Feedback } from "@/components/Feedback";
+import { Feedback } from "@/components/feedback/Feedback";
 
 const fetchTopic = (slug: string) => {
   const TopicQuery = groq`
