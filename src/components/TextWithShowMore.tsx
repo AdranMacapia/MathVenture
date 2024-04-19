@@ -28,7 +28,12 @@ const ShowMoreLess = ({
     <>
       {renderText()}
       {text.length > maxLength && (
-        <styled.button onClick={toggleShowAll} cursor="pointer">
+        <styled.button
+          onClick={toggleShowAll}
+          cursor="pointer"
+          fontWeight="bold"
+          color="primary.default"
+        >
           {showAll ? "show less" : "show more"}
         </styled.button>
       )}

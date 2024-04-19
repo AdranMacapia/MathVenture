@@ -1,7 +1,8 @@
 import Image from "next/image";
-import { GridItemWithImage, HeroWithGrid } from "sanity.types";
+import { HeroWithGrid } from "sanity.types";
 import { urlForImage } from "./../../../sanity/lib/image";
-import { Box, Container, VStack, styled } from "styled-system/jsx";
+import { Container, VStack, styled } from "styled-system/jsx";
+import ShowMoreLess from "@/components/TextWithShowMore";
 
 export const TheTeam = ({ data }: { data: HeroWithGrid | null }) => {
   const actualData = data as HeroWithGrid;
@@ -45,7 +46,10 @@ export const TheTeam = ({ data }: { data: HeroWithGrid | null }) => {
                     {gridItem.title}
                   </styled.h3>
                   <styled.p fontSize="sm" fontWeight="medium" color="gray">
-                    {gridItem.description}
+                    <ShowMoreLess
+                      text={gridItem.description || ""}
+                      maxLength={100}
+                    />
                   </styled.p>
                 </VStack>
               </styled.div>
