@@ -24,7 +24,8 @@ const fetchSimulation = (slug: string) => {
       },
       simulationScreenshots,
       objectives,
-      mechanics
+      mechanics,
+      credit
     }
   `;
 

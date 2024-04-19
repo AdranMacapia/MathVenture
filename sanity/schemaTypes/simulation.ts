@@ -34,6 +34,12 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
+      name: "credit",
+      title: "Simulation Credit",
+      type: "blockContent",
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
       name: "objectives",
       title: "Objectives",
       type: "blockContent",

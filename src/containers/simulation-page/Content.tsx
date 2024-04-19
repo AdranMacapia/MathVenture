@@ -122,19 +122,15 @@ export const Content = ({
               rounded="12px"
               borderWidth="1px"
               bgColor="gray.3"
-              py="20px"
+              pt="20px"
+              pb="4px"
               px="24px"
             >
               <styled.p fontWeight="extrabold">Simulation credit</styled.p>
-              <styled.p fontWeight="semibold" fontSize="sm" mt="10px">
-                <styled.a
-                  href={simulation?.simulationUrl || ""}
-                  color="primary.default"
-                  textDecoration="underline"
-                >
-                  {simulation?.simulationUrl}
-                </styled.a>
-              </styled.p>
+              <styled.div mt="10px">
+                {/* @ts-ignore */}
+                <RichText content={simulation?.credit} size="sm" />
+              </styled.div>
             </Box>
           </Box>
         </Flex>

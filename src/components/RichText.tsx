@@ -4,6 +4,7 @@ import { prose } from "styled-system/recipes";
 import { getImageDimensions } from "@sanity/asset-utils";
 import { urlForImage } from "./../../sanity/lib/image";
 import Image from "next/image";
+import { css, cx } from "styled-system/css";
 
 const SanityImageComponent = ({ value, isInline }: any) => {
   const { height } = getImageDimensions(value);
@@ -26,10 +27,26 @@ const SanityImageComponent = ({ value, isInline }: any) => {
   );
 };
 
-export const RichText = ({ content }: { content: PortableTextBlock }) => {
+export const RichText = ({
+  content,
+  size,
+}: {
+  content: PortableTextBlock;
+  size?: "sm" | "lg";
+}) => {
   return (
     <styled.div
-      className={prose({})}
+      className={cx(
+        prose({
+          size,
+        }),
+        css({
+          "& a": {
+            color: "primary.default",
+            fontWeight: "semibold",
+          },
+        })
+      )}
       color="gray"
       w="full"
       fontWeight="semibold"
