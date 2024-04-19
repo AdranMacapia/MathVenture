@@ -19,7 +19,7 @@ export const Feedback = () => {
       <styled.section bgColor="black" className={css({ mt: "140px" })}>
         <Container
           maxW="1239px"
-          py={{ base: "100px", md: "140px" }}
+          py={{ base: "100px", md: "100px" }}
           textAlign="center"
           color="white"
           className={center({
