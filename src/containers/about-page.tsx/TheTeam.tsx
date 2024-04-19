@@ -34,7 +34,6 @@ export const TheTeam = ({ data }: { data: HeroWithGrid | null }) => {
                   w="full"
                   borderWidth="1px"
                   rounded="10px"
-                  borderColor="primary.default"
                 >
                   <Image
                     // @ts-ignore
