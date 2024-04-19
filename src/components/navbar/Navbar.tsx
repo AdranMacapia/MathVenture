@@ -1,4 +1,4 @@
-import { Flex, HStack, styled } from "styled-system/jsx";
+import { Box, Flex, HStack, styled } from "styled-system/jsx";
 import Logo from "@/public/logo.svg";
 import { container } from "styled-system/patterns";
 import { NavLink } from "./NavLink";
@@ -7,6 +7,7 @@ import { MenuButtonWithDrawer } from "./MenuButtonWithDrawer";
 import { currentUser } from "@clerk/nextjs";
 import { LoginWithAvatar } from "./LoginWithAvatar";
 import { Button } from "../Button";
+import Image from "next/image";
 
 export const Navbar = async () => {
   const user = await currentUser();
@@ -14,14 +15,16 @@ export const Navbar = async () => {
   return (
     <styled.nav
       className={container({ maxW: "1239px" })}
-      py="26px"
+      py="16px"
       display="flex"
       justifyContent="space-between"
       alignItems="center"
     >
       <Flex gap="60px" alignItems="center">
         <Link href="/">
-          <Logo />
+          <Box width="110px" height="80px" pos="relative">
+            <Image src="/logo.png" alt="Mathventures" fill />
+          </Box>
         </Link>
 
         <styled.ul display={{ base: "none", md: "flex" }} gap="32px">

@@ -28,6 +28,7 @@ export const Menus = ({
     <>
       <HStack>
         <Menu.Root
+          closeOnSelect={false}
           onSelect={(id) => {
             const selectedValueAlreadyExits = Boolean(
               existingValues?.find(

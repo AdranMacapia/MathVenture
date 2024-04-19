@@ -1,6 +1,6 @@
 "use client";
 
-import { styled } from "styled-system/jsx";
+import { Box, styled } from "styled-system/jsx";
 import MenuIcon from "@/public/icons/MenuIcon.svg";
 import XCloseIcon from "@/public/icons/XCloseIcon.svg";
 
@@ -11,6 +11,7 @@ import Link from "next/link";
 import Logo from "@/public/logo.svg";
 import { useState } from "react";
 import { useUser } from "@clerk/nextjs";
+import Image from "next/image";
 
 export const MenuButtonWithDrawer = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -31,8 +32,11 @@ export const MenuButtonWithDrawer = () => {
           <Drawer.Content>
             <Drawer.Header>
               <Link href="/">
-                <Logo />
+                <Box width="110px" height="80px" pos="relative">
+                  <Image src="/logo.png" alt="Mathventures" fill />
+                </Box>
               </Link>
+
               <Button
                 variant="ghost"
                 position="absolute"
