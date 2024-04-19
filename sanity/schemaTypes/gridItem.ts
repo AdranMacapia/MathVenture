@@ -19,13 +19,12 @@ export default defineType({
   preview: {
     select: {
       title: "title",
-      image: "image",
     },
-    prepare({ title, image }) {
+    prepare({ title }) {
       return {
         title: title || "Untitled",
         subtitle: "Grid item",
-        media: image || DocumentTextIcon,
+        media: DocumentTextIcon,
       };
     },
   },

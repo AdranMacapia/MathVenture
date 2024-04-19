@@ -16,19 +16,25 @@ export const MissionVision = ({
   return (
     <styled.section bgColor="white" mt="130px">
       <Container maxW="1239px">
-        <styled.div maxW="800px" textAlign="center" mx="auto">
+        <styled.div
+          display="grid"
+          gridTemplateColumns={{ base: 1, md: 2 }}
+          rowGap="32px"
+          columnGap="42px"
+          w="full"
+        >
           <styled.div>
             <styled.h2 fontSize="26px" fontWeight="extrabold" mb="35px">
               Our Mission
             </styled.h2>
 
-            <styled.div fontWeight="semibold">
+            <styled.div fontWeight="semibold" color="gray">
               {/* @ts-ignore */}
               <RichText content={missionContent?.content} />
             </styled.div>
           </styled.div>
 
-          <styled.div mt="130px">
+          <styled.div>
             <styled.h2 fontSize="26px" fontWeight="extrabold" mb="35px">
               Our Vision
             </styled.h2>

@@ -15,6 +15,7 @@ import user from "./schemaTypes/user";
 import feedback from "./schemaTypes/feedback";
 import heroWithGrid from "./schemaTypes/heroWithGrid";
 import gridItem from "./schemaTypes/gridItem";
+import gridItemWithImage from "./schemaTypes/gridItemWithImage";
 
 export const schema: { types: SchemaTypeDefinition[] } = {
   types: [
@@ -33,5 +34,6 @@ export const schema: { types: SchemaTypeDefinition[] } = {
     feedback,
     heroWithGrid,
     gridItem,
+    gridItemWithImage,
   ],
 };

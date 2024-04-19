@@ -68,6 +68,24 @@ export type Geopoint = {
   alt?: number;
 };
 
+export type GridItemWithImage = {
+  _type: "gridItemWithImage";
+  title?: string;
+  description?: string;
+  image?: {
+    asset?: {
+      _ref: string;
+      _type: "reference";
+      _weak?: boolean;
+      [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
+    };
+    hotspot?: SanityImageHotspot;
+    crop?: SanityImageCrop;
+    alt?: string;
+    _type: "image";
+  };
+};
+
 export type GridItem = {
   _type: "gridItem";
   title?: string;
@@ -78,9 +96,11 @@ export type HeroWithGrid = {
   _type: "heroWithGrid";
   heading?: string;
   tagline?: string;
-  grid?: Array<{
+  grid?: Array<({
     _key: string;
-  } & GridItem>;
+  } & GridItem) | ({
+    _key: string;
+  } & GridItemWithImage)>;
 };
 
 export type Feedback = {

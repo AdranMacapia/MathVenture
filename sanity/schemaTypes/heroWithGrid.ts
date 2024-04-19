@@ -18,7 +18,7 @@ export default defineType({
       name: "grid",
       title: "Grid items",
       type: "array",
-      of: [{ type: "gridItem" }],
+      of: [{ type: "gridItem" }, { type: "gridItemWithImage" }],
     }),
   ],
   icon: DocumentTextIcon,

@@ -11,9 +11,10 @@ export const Header = ({ data }: { data: HeroContent | null }) => {
         <Center
           bgImage="url(/backgrounds/puzzle.png)"
           flexDir="column"
-          h="428px"
+          minH="428px"
           borderRadius="12px"
-          px="16px"
+          px="24px"
+          py="52px"
         >
           <styled.h2 fontWeight="black" fontSize="32px">
             {actualData?.heading}
