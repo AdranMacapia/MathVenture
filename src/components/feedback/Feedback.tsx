@@ -79,6 +79,7 @@ export const Feedback = () => {
                 <>
                   <HStack w="full">
                     <Button
+                      type="button"
                       w="full"
                       variant="subtle"
                       borderColor={
@@ -93,6 +94,7 @@ export const Feedback = () => {
                     </Button>
 
                     <Button
+                      type="button"
                       w="full"
                       variant="subtle"
                       borderColor={
@@ -107,6 +109,7 @@ export const Feedback = () => {
                     </Button>
 
                     <Button
+                      type="button"
                       w="full"
                       variant="subtle"
                       borderColor={
@@ -131,6 +134,7 @@ export const Feedback = () => {
                       value={feedbackType}
                       name="feedbackType"
                       id="feedbackType"
+                      readOnly
                     />
 
                     <Textarea
