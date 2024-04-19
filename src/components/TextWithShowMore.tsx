@@ -32,9 +32,9 @@ const ShowMoreLess = ({
           onClick={toggleShowAll}
           cursor="pointer"
           fontWeight="bold"
-          color="primary.default"
+          color="gray"
         >
-          {showAll ? "show less" : "show more"}
+          {showAll ? "...show less" : "show more"}
         </styled.button>
       )}
     </>
