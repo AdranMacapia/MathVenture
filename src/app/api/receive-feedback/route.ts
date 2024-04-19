@@ -1,6 +1,7 @@
 import { client } from "../../../../sanity/lib/client";
 import { z } from "zod";
 import { Feedback } from "sanity.types";
+import { serverBaseUrl } from "@/lib/utils";
 
 const CreateSanityUserSchema = z.object({
   feedbackType: z.string().optional().nullable(),
@@ -36,6 +37,10 @@ export async function POST(request: Request) {
 
     return Response.json({
       message: `Feedback added successfully`,
+      headers: {
+        "Access-Control-Allow-Origin": serverBaseUrl,
+        "Access-Control-Allow-Methods": "GET",
+      },
     });
   } catch (error) {
     console.log(error);
