@@ -8,6 +8,7 @@ import { client } from "../../../sanity/lib/client";
 import { HeroWithGrid, HomePageQueryResult } from "sanity.types";
 import { WhatWeOffer } from "./WhatWeOffer";
 import { HeroContent } from "@/lib/shared.types";
+import { Objectives } from "./Objectives";
 
 const fetchHomePageInfo = () => {
   const HomePageQuery = groq`
@@ -29,6 +30,7 @@ export const HomePage = async () => {
   const topicsContent = data?.pageBuilder ? data.pageBuilder[1] : null;
   const whatWeOfferContent = data?.pageBuilder ? data.pageBuilder[2] : null;
   const ctaContent = data?.pageBuilder ? data.pageBuilder[3] : null;
+  const objectivesContent = data?.pageBuilder ? data.pageBuilder[4] : null;
 
   return (
     <>
@@ -37,6 +39,7 @@ export const HomePage = async () => {
       <main>
         <Topics data={topicsContent as HeroContent | null} />
 
+        <Objectives data={objectivesContent as HeroWithGrid | null} />
         <WhatWeOffer data={whatWeOfferContent as HeroWithGrid | null} />
         <CallToAction data={ctaContent as HeroContent | null} />
 
