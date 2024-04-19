@@ -10,7 +10,7 @@ export const WhatWeOffer = ({ data }: { data: HeroWithGrid | null }) => {
     <styled.section bgColor="black" className={css({ mt: "140px" })}>
       <Container
         maxW="1239px"
-        py={{ base: "100px", md: "140px" }}
+        py={{ base: "100px", md: "160px" }}
         color="white"
         className={center({
           flexDir: "column",
@@ -33,7 +33,7 @@ export const WhatWeOffer = ({ data }: { data: HeroWithGrid | null }) => {
         <styled.div
           mt="64px"
           display="grid"
-          gridTemplateColumns={{ base: 1, md: 2, lg: 3 }}
+          gridTemplateColumns={{ base: 1, md: 2 }}
           rowGap="32px"
           columnGap="42px"
           w="full"
