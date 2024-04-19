@@ -6,9 +6,9 @@ export const parseColor = (color?: Color["rgb"] | null) => {
 
 export const baseUrl =
   process.env.NODE_ENV === "production"
-    ? "https://www.math-venture.vercel.app"
+    ? "https://math-venture.vercel.app"
     : `${process.env.NEXT_PUBLIC_PROTOCOL || "https"}://${process.env.NEXT_PUBLIC_VERCEL_URL}`;
 export const serverBaseUrl =
   process.env.NODE_ENV === "production"
-    ? "https://www.math-venture.vercel.app"
+    ? "https://math-venture.vercel.app"
     : `${process.env.PROTOCOL || "https"}://${process.env.VERCEL_URL}`;
