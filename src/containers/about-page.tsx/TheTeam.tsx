@@ -28,7 +28,14 @@ export const TheTeam = ({ data }: { data: HeroWithGrid | null }) => {
           {actualData?.grid?.map((gridItem) => {
             return (
               <styled.div key={gridItem._key}>
-                <styled.div pos="relative" h="300px" w="full">
+                <styled.div
+                  pos="relative"
+                  h="300px"
+                  w="full"
+                  borderWidth="1px"
+                  rounded="10px"
+                  borderColor="primary.default"
+                >
                   <Image
                     // @ts-ignore
                     src={urlForImage(gridItem?.image || "")}
