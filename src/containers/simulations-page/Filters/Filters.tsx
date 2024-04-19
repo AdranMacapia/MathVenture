@@ -20,12 +20,18 @@ const fetchTopicsForFilter = () => {
   return result;
 };
 
-export const Filters = async () => {
+export const Filters = async ({
+  noOfSimulations,
+  values,
+}: {
+  noOfSimulations: number;
+  values?: string[];
+}) => {
   const topics = await fetchTopicsForFilter();
 
   return (
     <Flex
-      justifyContent="end"
+      justifyContent="space-between"
       alignItems={{ md: "center" }}
       px="16px"
       py="12px"
@@ -34,6 +40,10 @@ export const Filters = async () => {
       direction={{ base: "column", md: "row" }}
       gap="10px"
     >
+      <styled.h3 fontWeight="extrabold">
+        Showing {noOfSimulations} simulations
+      </styled.h3>
+
       <Menus topics={topics} />
     </Flex>
   );

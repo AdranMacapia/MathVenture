@@ -63,7 +63,10 @@ export const SimulationsPage = async ({
       <styled.main mt="100px">
         <styled.section>
           <Container maxW="1239px">
-            <Filters />
+            <Filters
+              noOfSimulations={allSimulations?.length}
+              values={filter?.split(",")}
+            />
             <SimulationList simulations={allSimulations} />
           </Container>
         </styled.section>
