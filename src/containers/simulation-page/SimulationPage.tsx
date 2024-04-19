@@ -5,6 +5,8 @@ import { groq } from "next-sanity";
 import { client } from "./../../../sanity/lib/client";
 import { SimulationQueryResult } from "sanity.types";
 import { Feedback } from "@/components/Feedback";
+import Script from "next/script";
+import { baseUrl } from "@/lib/utils";
 
 const fetchSimulation = (slug: string) => {
   const SimulationQuery = groq`
@@ -35,6 +37,13 @@ export const SimulationPage = async ({ slug }: { slug: string }) => {
 
   return (
     <>
+      <Script src="https://unpkg.com/feedbackfin@^1" id="setup-fin" defer />
+
+      <Script id="setup-webhook">
+        {`window.feedbackfin = { config: {}, ...window.feedbackfin };
+  window.feedbackfin.config.url = "${baseUrl}/api/receive-feedback";`}
+      </Script>
+
       <Header simulation={data} />
 
       <styled.main mt="73px">
