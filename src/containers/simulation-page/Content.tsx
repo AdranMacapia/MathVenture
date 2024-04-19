@@ -117,21 +117,23 @@ export const Content = ({
               })}
             </Grid>
 
-            <Box
-              mt="32px"
-              rounded="12px"
-              borderWidth="1px"
-              bgColor="gray.3"
-              pt="20px"
-              pb="4px"
-              px="24px"
-            >
-              <styled.p fontWeight="extrabold">Simulation credit</styled.p>
-              <styled.div mt="10px">
-                {/* @ts-ignore */}
-                <RichText content={simulation?.credit} size="sm" />
-              </styled.div>
-            </Box>
+            {simulation?.credit && (
+              <Box
+                mt="32px"
+                rounded="12px"
+                borderWidth="1px"
+                bgColor="gray.3"
+                pt="20px"
+                pb="10px"
+                px="24px"
+              >
+                <styled.p fontWeight="extrabold">Simulation credit</styled.p>
+                <styled.div mt="10px">
+                  {/* @ts-ignore */}
+                  <RichText content={simulation?.credit} size="sm" />
+                </styled.div>
+              </Box>
+            )}
           </Box>
         </Flex>
       </Container>
