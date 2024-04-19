@@ -124,7 +124,7 @@ export const Content = ({
                 borderWidth="1px"
                 bgColor="gray.3"
                 pt="20px"
-                pb="10px"
+                pb="30px"
                 px="24px"
               >
                 <styled.p fontWeight="extrabold">Simulation credit</styled.p>
