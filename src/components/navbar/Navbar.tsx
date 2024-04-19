@@ -1,5 +1,4 @@
 import { Box, Flex, HStack, styled } from "styled-system/jsx";
-import Logo from "@/public/logo.svg";
 import { container } from "styled-system/patterns";
 import { NavLink } from "./NavLink";
 import Link from "next/link";

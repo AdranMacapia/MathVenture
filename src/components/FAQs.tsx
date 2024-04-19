@@ -5,6 +5,7 @@ import PlusIcon from "@/public/icons/PlusIcon.svg";
 import { client } from "../../sanity/lib/client";
 import { groq } from "next-sanity";
 import { FaqQueryResult } from "sanity.types";
+import { RichText } from "./RichText";
 
 const fetchFaqInfo = () => {
   const FaqQuery = groq`
@@ -72,7 +73,8 @@ export const FAQs = async () => {
                 fontWeight="medium"
                 color="gray"
               >
-                {item?.answer}
+                {/* @ts-ignore */}
+                <RichText content={item?.answer} size="sm" />
               </Accordion.ItemContent>
             </Accordion.Item>
           ))}

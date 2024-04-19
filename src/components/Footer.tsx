@@ -1,7 +1,7 @@
-import { Container, styled } from "styled-system/jsx";
+import { Box, Container, styled } from "styled-system/jsx";
 import { center } from "styled-system/patterns";
-import Logo from "@/public/logo.svg";
 import Link from "next/link";
+import Image from "next/image";
 
 export const Footer = () => {
   return (
@@ -17,7 +17,11 @@ export const Footer = () => {
           color: "gray",
         })}
       >
-        <Logo />
+        <Link href="/">
+          <Box width="110px" height="80px" pos="relative">
+            <Image src="/logo.png" alt="Mathventures" fill />
+          </Box>
+        </Link>
 
         <styled.p mt="14px">
           Copyright 2024 MathVenture. All rights reserved
