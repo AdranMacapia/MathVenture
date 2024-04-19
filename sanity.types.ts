@@ -71,6 +71,7 @@ export type Geopoint = {
 export type GridItemWithImage = {
   _type: "gridItemWithImage";
   title?: string;
+  position?: string;
   description?: string;
   image?: {
     asset?: {

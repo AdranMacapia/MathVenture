@@ -52,7 +52,17 @@ export const TheTeam = ({ data }: { data: HeroWithGrid | null }) => {
                   <styled.h3 fontWeight="bold" fontSize="18px">
                     {gridItem.title}
                   </styled.h3>
-                  <styled.p fontSize="sm" fontWeight="medium" color="gray">
+                  <styled.p fontWeight="bold" color="primary.default">
+                    {/* @ts-ignore */}
+                    {gridItem?.position}
+                  </styled.p>
+
+                  <styled.p
+                    fontSize="sm"
+                    fontWeight="semibold"
+                    color="gray"
+                    mt="10px"
+                  >
                     <ShowMoreLess
                       text={gridItem.description || ""}
                       maxLength={100}
