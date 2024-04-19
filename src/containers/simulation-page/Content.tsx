@@ -101,7 +101,7 @@ export const Content = ({
               })}
             </Grid>
 
-            {/* <Box
+            <Box
               mt="32px"
               rounded="12px"
               borderWidth="1px"
@@ -109,8 +109,17 @@ export const Content = ({
               py="20px"
               px="24px"
             >
-              <styled.p fontWeight="extrabold">Credits</styled.p>
-            </Box> */}
+              <styled.p fontWeight="extrabold">Simulation credit</styled.p>
+              <styled.p fontWeight="semibold" fontSize="sm" mt="10px">
+                <styled.a
+                  href={simulation?.simulationUrl || ""}
+                  color="primary.default"
+                  textDecoration="underline"
+                >
+                  {simulation?.simulationUrl}
+                </styled.a>
+              </styled.p>
+            </Box>
           </Box>
         </Flex>
       </Container>
