@@ -14,7 +14,14 @@ export const buttonType = defineType({
       name: "href",
       type: "string",
       options: {
-        list: ["/about", "/simulations", "/#faqs", "/privacy-policy", "/login"],
+        list: [
+          "/about",
+          "/simulations",
+          "/#faqs",
+          "/privacy-policy",
+          "/login",
+          "/topics",
+        ],
         layout: "dropdown",
       },
     }),
