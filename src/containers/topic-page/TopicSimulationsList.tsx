@@ -11,7 +11,7 @@ export const TopicSimulationsList = ({
   topic: TopicQueryResult;
 }) => {
   return (
-    <styled.section>
+    <styled.section id="#topics">
       <Container maxW="1239px">
         <styled.h2
           mt="102px"

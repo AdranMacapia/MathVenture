@@ -20,7 +20,7 @@ export const buttonType = defineType({
           "/#faqs",
           "/privacy-policy",
           "/login",
-          "/topics",
+          "/#topics",
         ],
         layout: "dropdown",
       },
