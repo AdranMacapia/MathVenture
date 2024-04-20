@@ -35,6 +35,7 @@ export const Topics = async ({ data }: { data: HeroContent | null }) => {
 
   return (
     <styled.section
+      id="topics"
       className={container({
         maxW: "1239px",
         mt: { base: "100px", md: "220px" },
