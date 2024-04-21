@@ -13,6 +13,7 @@ export const Objectives = ({ data }: { data: HeroWithGrid | null }) => {
       borderWidth="10px"
       borderStyle="dotted"
       borderColor="primary.default"
+      data-aos="fade-down"
     >
       <Container
         maxW="1239px"
@@ -47,6 +48,7 @@ export const Objectives = ({ data }: { data: HeroWithGrid | null }) => {
             return (
               <Box
                 key={info._key}
+                data-aos="fade-up"
                 py="20px"
                 px="20px"
                 rounded="10px"

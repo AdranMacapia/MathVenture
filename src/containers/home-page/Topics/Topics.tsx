@@ -41,7 +41,7 @@ export const Topics = async ({ data }: { data: HeroContent | null }) => {
         mt: { base: "100px", md: "220px" },
       })}
     >
-      <styled.div maxW="636px" w="full">
+      <styled.div maxW="636px" w="full" data-aos="fade-right">
         <styled.h2 color="gray.dark" fontWeight="extrabold" fontSize="32px">
           {actualData?.heading}
         </styled.h2>
@@ -57,6 +57,7 @@ export const Topics = async ({ data }: { data: HeroContent | null }) => {
         mt="104px"
         rowGap="32px"
         columnGap="21px"
+        data-aos="fade-left"
       >
         {topics?.map((topic, index) => {
           return (

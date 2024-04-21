@@ -14,7 +14,7 @@ export const PopoverWrapper = ({ children }: { children: ReactNode }) => {
         </Button>
       </Popover.Trigger>
       <Popover.Positioner>
-        <Popover.Content minW="400px" textAlign="unset">
+        <Popover.Content minW={{ sm: "400px" }} textAlign="unset">
           <Popover.Arrow>
             <Popover.ArrowTip />
           </Popover.Arrow>

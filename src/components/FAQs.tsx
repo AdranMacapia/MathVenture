@@ -54,7 +54,11 @@ export const FAQs = async () => {
           multiple
         >
           {faqs?.map((item) => (
-            <Accordion.Item key={item._id} value={item?.question || ""}>
+            <Accordion.Item
+              key={item._id}
+              value={item?.question || ""}
+              data-aos="fade-up"
+            >
               <Accordion.ItemTrigger
                 fontSize="16px"
                 fontWeight="bold"

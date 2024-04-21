@@ -6,7 +6,12 @@ export const WhatWeOffer = ({ data }: { data: HeroWithGrid | null }) => {
   const actualData = data as HeroWithGrid;
 
   return (
-    <styled.section borderWidth="10px" borderStyle="dotted">
+    <styled.section
+      borderWidth="10px"
+      borderStyle="dotted"
+      borderTopWidth={0}
+      borderBottomWidth={0}
+    >
       <Container
         maxW="1239px"
         py={{ base: "100px", md: "160px" }}
@@ -40,6 +45,7 @@ export const WhatWeOffer = ({ data }: { data: HeroWithGrid | null }) => {
             return (
               <Box
                 key={info._key}
+                data-aos="fade-up"
                 _hover={{
                   bgColor: "gray.light.3",
                 }}

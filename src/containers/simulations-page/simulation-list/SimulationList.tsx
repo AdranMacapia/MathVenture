@@ -28,7 +28,11 @@ export const SimulationList = ({ simulations }: SimulationListProps) => {
       >
         {simulations?.length > 0 &&
           simulations.map((simulation: any, index: number) => (
-            <Link key={index} href={`/simulations/${simulation.slug}`}>
+            <Link
+              key={index}
+              href={`/simulations/${simulation.slug}`}
+              data-aos="fade-up"
+            >
               <SimulationCard
                 bgColor={parseColor(simulation.topic?.bgColor?.rgb)}
                 textColor={parseColor(simulation.topic?.textColor?.rgb)}

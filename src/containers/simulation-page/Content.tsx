@@ -54,7 +54,7 @@ export const Content = ({
               </styled.p>
             </>
 
-            <styled.div mt="80px">
+            <styled.div mt="80px" data-aos="fade-up">
               <styled.h2
                 fontSize="sm"
                 fontWeight="black"
@@ -69,7 +69,7 @@ export const Content = ({
             </styled.div>
 
             {simulation?.mechanics && (
-              <styled.div mt="80px">
+              <styled.div mt="80px" data-aos="fade-up">
                 <styled.h2
                   fontSize="sm"
                   fontWeight="black"
@@ -101,6 +101,7 @@ export const Content = ({
                     w="full"
                     rounded="10px"
                     border="1px solid rgba(0, 0, 0, 0.1)"
+                    data-aos="fade-up"
                   >
                     <Image
                       src={urlForImage(screenshot)}
