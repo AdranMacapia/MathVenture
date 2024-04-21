@@ -129,7 +129,7 @@ export const Content = ({
                 px="24px"
               >
                 <styled.p fontWeight="extrabold">Simulation credit</styled.p>
-                <styled.div mt="10px">
+                <styled.div mt="10px" fontSize="sm">
                   {/* @ts-ignore */}
                   <RichText content={simulation?.credit} size="sm" />
                 </styled.div>
