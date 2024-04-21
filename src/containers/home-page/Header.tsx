@@ -44,10 +44,14 @@ export const Header = ({ data }: { data: HeroContent | null }) => {
             mt="54px"
             gap={"15px"}
           >
-            {actualData?.actionButtons?.map((btn) => {
+            {actualData?.actionButtons?.map((btn, index) => {
               return (
                 <Link key={btn._key} href={btn.href as string}>
-                  <Button w="full" variant={btn.variant}>
+                  <Button
+                    w="full"
+                    variant={btn.variant}
+                    className={`animate__animated animate__bounce animate__delay-${index + 1}s`}
+                  >
                     {btn.label}
                   </Button>
                 </Link>
@@ -62,6 +66,7 @@ export const Header = ({ data }: { data: HeroContent | null }) => {
             w="full"
             rounded="8px"
             border="1px dashed rgba(0, 0, 0, 0.1)"
+            data-aos="flip-up"
           >
             <Image
               // @ts-ignore

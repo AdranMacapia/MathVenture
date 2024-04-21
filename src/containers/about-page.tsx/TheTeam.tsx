@@ -29,6 +29,7 @@ export const TheTeam = ({ data }: { data: HeroWithGrid | null }) => {
             return (
               <styled.div key={gridItem._key}>
                 <styled.div
+                  data-aos="fade-up"
                   pos="relative"
                   h="300px"
                   w="full"
@@ -48,19 +49,30 @@ export const TheTeam = ({ data }: { data: HeroWithGrid | null }) => {
                 </styled.div>
 
                 <VStack alignItems="start" gap="4px" mt="20px">
-                  <styled.h3 fontWeight="bold" fontSize="18px">
+                  <styled.h3
+                    fontWeight="bold"
+                    fontSize="18px"
+                    data-aos="fade-up"
+                  >
                     {gridItem.title}
                   </styled.h3>
                   <styled.p
                     fontWeight="bold"
                     color="primary.default"
                     fontSize="15px"
+                    data-aos="fade-up"
                   >
                     {/* @ts-ignore */}
                     {gridItem?.position}
                   </styled.p>
 
-                  <styled.p fontWeight="medium" color="gray" mt="10px">
+                  <styled.p
+                    fontWeight="medium"
+                    color="gray"
+                    mt="10px"
+                    data-aos="fade-up"
+                    fontSize="15px"
+                  >
                     <ShowMoreLess
                       text={gridItem.description || ""}
                       maxLength={100}

@@ -1918,6 +1918,10 @@
               {
                 "type": "string",
                 "value": "/login"
+              },
+              {
+                "type": "string",
+                "value": "/#topics"
               }
             ]
           },

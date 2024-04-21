@@ -25,7 +25,11 @@ export const Content = ({
         >
           <styled.div w="full" maxW="600px">
             <>
-              <styled.h1 fontSize="28px" fontWeight="extrabold">
+              <styled.h1
+                fontSize="28px"
+                fontWeight="extrabold"
+                data-aos="fade-up"
+              >
                 {simulation?.title}
               </styled.h1>
 
@@ -42,11 +46,17 @@ export const Content = ({
                 fontWeight="black"
                 display="inline-block"
                 textTransform="uppercase"
+                data-aos="fade-up"
               >
                 {simulation?.topic?.title}
               </styled.div>
 
-              <styled.p fontWeight="semibold" mt="40px" color="gray">
+              <styled.p
+                fontWeight="semibold"
+                mt="40px"
+                color="gray"
+                data-aos="fade-up"
+              >
                 <ShowMoreLess
                   text={simulation?.subtitle || ""}
                   maxLength={500}
@@ -127,6 +137,7 @@ export const Content = ({
                 pt="20px"
                 pb="30px"
                 px="24px"
+                data-aos="fade-up"
               >
                 <styled.p fontWeight="extrabold">Simulation credit</styled.p>
                 <styled.div mt="10px" fontSize="sm">

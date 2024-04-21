@@ -40,7 +40,7 @@ export const Filters = async ({
       direction={{ base: "column", md: "row" }}
       gap="10px"
     >
-      <styled.h3 fontWeight="extrabold">
+      <styled.h3 fontWeight="extrabold" data-aos="flip-left">
         Showing {noOfSimulations} simulations
       </styled.h3>
 

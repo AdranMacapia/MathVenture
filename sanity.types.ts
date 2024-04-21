@@ -291,7 +291,7 @@ export type Page = {
 export type Button = {
   _type: "button";
   label?: string;
-  href?: "/about" | "/simulations" | "/#faqs" | "/privacy-policy" | "/login";
+  href?: "/about" | "/simulations" | "/#faqs" | "/privacy-policy" | "/login" | "/#topics";
   variant?: "outline" | "solid";
 };
 

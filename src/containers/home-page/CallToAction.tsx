@@ -30,7 +30,11 @@ export const CallToAction = ({ data }: { data: HeroContent | null }) => {
         {actualData?.actionButtons?.map((btn) => {
           return (
             <Link key={btn._key} href={btn.href as string}>
-              <Button bgColor="white" color="black">
+              <Button
+                bgColor="white"
+                color="black"
+                className="animate__animated animate__bounce"
+              >
                 {btn.label}
               </Button>
             </Link>

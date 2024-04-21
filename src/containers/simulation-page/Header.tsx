@@ -62,6 +62,7 @@ export const Header = ({
               borderColor: textColor,
               backgroundBlendMode: "overlay",
             }}
+            data-aos="flip-up"
           >
             <styled.button cursor="pointer">
               <PlayIcon />

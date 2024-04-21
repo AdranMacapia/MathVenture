@@ -23,7 +23,7 @@ export const MissionVision = ({
           columnGap="42px"
           w="full"
         >
-          <styled.div>
+          <styled.div data-aos="fade-right">
             <styled.h2 fontSize="26px" fontWeight="extrabold" mb="35px">
               Our Mission
             </styled.h2>
@@ -34,7 +34,7 @@ export const MissionVision = ({
             </styled.div>
           </styled.div>
 
-          <styled.div>
+          <styled.div data-aos="fade-left">
             <styled.h2 fontSize="26px" fontWeight="extrabold" mb="35px">
               Our Vision
             </styled.h2>
