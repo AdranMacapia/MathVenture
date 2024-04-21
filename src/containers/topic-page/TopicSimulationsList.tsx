@@ -30,7 +30,12 @@ export const TopicSimulationsList = ({
           columnGap="21px"
         >
           {topic?.simulations?.map((simulation, index) => (
-            <Link key={index} href={`/simulations/${simulation.slug}`}>
+            <Link
+              key={index}
+              href={`/simulations/${simulation.slug}`}
+              data-aos="fade-up"
+              data-aos-delay={`${index + 1}00`}
+            >
               <SimulationCard
                 bgColor={parseColor(topic?.bgColor?.rgb)}
                 textColor={parseColor(topic?.textColor?.rgb)}

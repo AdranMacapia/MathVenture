@@ -47,7 +47,8 @@ export const SimulationCard = ({
           style={{
             backgroundColor: bgColor,
             objectFit: "cover",
-            borderRadius: "10px",
+            borderRadius: "12px",
+            borderWidth: "1px",
           }}
         />
       </styled.div>

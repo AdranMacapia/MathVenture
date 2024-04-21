@@ -20,16 +20,25 @@ export const Content = ({ topic }: { topic: TopicQueryResult }) => {
       >
         <styled.div w="full" maxW="600px">
           <>
-            <styled.h1 fontSize="28px" fontWeight="extrabold">
+            <styled.h1
+              fontSize="28px"
+              fontWeight="extrabold"
+              data-aos="fade-up"
+            >
               {topic?.title}
             </styled.h1>
 
-            <styled.p fontWeight="semibold" mt="40px" color="gray">
+            <styled.p
+              fontWeight="semibold"
+              mt="40px"
+              color="gray"
+              data-aos="fade-up"
+            >
               {topic?.subtitle}
             </styled.p>
           </>
 
-          <styled.div mt="80px">
+          <styled.div mt="80px" data-aos="fade-up">
             <styled.h2
               fontSize="sm"
               fontWeight="black"
@@ -51,14 +60,16 @@ export const Content = ({ topic }: { topic: TopicQueryResult }) => {
           w="full"
           h="fit-content"
         >
-          {topic?.simulationScreenshots?.map((screenshot) => {
+          {topic?.simulationScreenshots?.map((screenshot, index) => {
             return (
               <styled.div
                 key={screenshot._key}
                 pos="relative"
                 height="177px"
                 w="full"
-                rounded="10px"
+                rounded="12px"
+                data-aos="fade-up"
+                data-aos-delay={`${index + 1}00`}
               >
                 <Image
                   src={urlForImage(screenshot)}
